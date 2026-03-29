@@ -1,940 +1,466 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saransh Dry Fruits – Premium Quality Since 2024</title>
+  <title>Saransh Dry Fruits – Premium Quality Dry Fruits Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --gold: #C8922A;
-      --gold-light: #F0C45A;
-      --brown: #5C3317;
-      --brown-dark: #3A1F0D;
-      --cream: #FDF6EC;
-      --cream-dark: #F5E6D0;
-      --green: #2D6A4F;
-      --green-light: #52B788;
-      --text: #2C1A0E;
-      --text-muted: #7A5C42;
-      --white: #FFFFFF;
-      --shadow: 0 8px 40px rgba(92,51,23,0.13);
-      --radius: 18px;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--gold:#C8922A;--gold-light:#F0C45A;--brown:#5C3317;--brown-dark:#3A1F0D;--cream:#FDF6EC;--cream-dark:#F5E6D0;--green:#2D6A4F;--red:#E53935;--text:#1a1a1a;--muted:#666;--white:#fff;--shadow:0 4px 24px rgba(0,0,0,0.10);--radius:16px;}
+    html{scroll-behavior:smooth}
+    body{font-family:'Nunito',sans-serif;background:#f7f7f7;color:var(--text);overflow-x:hidden}
+    nav{position:sticky;top:0;z-index:999;background:var(--brown-dark);padding:0 4%;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:0 2px 12px rgba(0,0,0,0.3)}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .nav-logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),#a0711a);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px}
+    .nav-brand-text{color:var(--white)}
+    .nav-brand-text h1{font-family:'Playfair Display',serif;font-size:1.1rem;line-height:1}
+    .nav-brand-text span{font-size:0.65rem;color:var(--gold-light);letter-spacing:2px;text-transform:uppercase}
+    .nav-search{flex:1;max-width:500px;margin:0 20px;display:flex}
+    .nav-search input{flex:1;padding:10px 16px;border:none;border-radius:8px 0 0 8px;font-family:'Nunito',sans-serif;font-size:0.9rem;outline:none}
+    .nav-search button{background:var(--gold);border:none;padding:0 18px;border-radius:0 8px 8px 0;cursor:pointer;font-size:1.1rem}
+    .nav-right{display:flex;align-items:center;gap:12px}
+    .cart-btn{background:var(--gold);color:var(--brown-dark);border:none;cursor:pointer;padding:10px 18px;border-radius:8px;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.9rem;display:flex;align-items:center;gap:8px;transition:all 0.2s}
+    .cart-btn:hover{background:var(--gold-light)}
+    .cart-count{background:var(--red);color:var(--white);border-radius:50%;width:20px;height:20px;font-size:0.72rem;display:flex;align-items:center;justify-content:center;font-weight:800}
+    .wa-nav-btn{background:#25D366;color:white;border:none;cursor:pointer;padding:10px 16px;border-radius:8px;font-weight:800;font-size:0.85rem;text-decoration:none;display:flex;align-items:center;gap:6px}
+    .hero{background:linear-gradient(135deg,var(--brown-dark) 0%,#7a4520 100%);padding:40px 4%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .hero-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);line-height:1.2;margin-bottom:12px}
+    .hero-text h2 span{color:var(--gold-light)}
+    .hero-text p{color:rgba(255,255,255,0.82);font-size:0.95rem;margin-bottom:20px;line-height:1.65}
+    .hero-badges{display:flex;gap:8px;flex-wrap:wrap}
+    .hero-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);color:var(--white);padding:5px 12px;border-radius:50px;font-size:0.78rem;font-weight:700}
+    .hero-img-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .hero-pcard{background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;text-align:center;cursor:pointer;transition:transform 0.2s;border:1px solid rgba(255,255,255,0.15)}
+    .hero-pcard:hover{transform:scale(1.06)}
+    .hero-pcard img{width:100%;height:75px;object-fit:cover}
+    .hero-pcard p{color:var(--white);font-size:0.7rem;font-weight:700;padding:5px;background:rgba(0,0,0,0.35)}
+    .trust-bar{background:var(--gold);display:flex;justify-content:center;gap:32px;padding:11px 4%;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:7px;font-weight:800;font-size:0.82rem;color:var(--brown-dark)}
+    .cat-section{background:var(--white);padding:14px 4%;border-bottom:2px solid #eee;overflow-x:auto}
+    .cat-tabs{display:flex;gap:8px;min-width:max-content}
+    .cat-tab{background:var(--cream);border:2px solid var(--cream-dark);border-radius:50px;padding:7px 18px;font-weight:800;font-size:0.82rem;cursor:pointer;transition:all 0.2s;white-space:nowrap;color:var(--brown)}
+    .cat-tab.active,.cat-tab:hover{background:var(--brown-dark);color:var(--white);border-color:var(--brown-dark)}
+    .products-section{padding:22px 4%}
+    .sec-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .sec-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--brown-dark)}
+    .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:18px}
+    .product-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all 0.3s;position:relative}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(0,0,0,0.15)}
+    .prod-img-wrap{position:relative;height:210px;overflow:hidden;background:#f5f5f5}
+    .prod-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s}
+    .product-card:hover .prod-img-wrap img{transform:scale(1.06)}
+    .prod-tag{position:absolute;top:10px;left:10px;padding:4px 10px;border-radius:6px;font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    .tag-best{background:#ff6f00;color:white}
+    .tag-fresh{background:var(--green);color:white}
+    .tag-premium{background:var(--brown-dark);color:var(--gold-light)}
+    .tag-sale{background:var(--red);color:white}
+    .wish-btn{position:absolute;top:10px;right:10px;background:white;border:none;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:0.95rem;transition:transform 0.2s}
+    .wish-btn:hover{transform:scale(1.2)}
+    .prod-body{padding:14px}
+    .prod-name{font-weight:800;font-size:0.95rem;color:var(--brown-dark);margin-bottom:3px;line-height:1.3}
+    .prod-sub{font-size:0.75rem;color:var(--muted);margin-bottom:7px}
+    .stars{color:#f5a623;font-size:0.8rem;margin-bottom:8px}
+    .stars span{color:var(--muted);font-size:0.73rem;font-weight:600}
+    .weight-sel{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap}
+    .wbtn{border:1.5px solid #ddd;background:white;border-radius:6px;padding:4px 9px;font-size:0.72rem;font-weight:700;cursor:pointer;transition:all 0.15s;color:var(--text)}
+    .wbtn.active,.wbtn:hover{border-color:var(--brown);background:var(--brown);color:white}
+    .price-row{display:flex;align-items:baseline;gap:7px;margin-bottom:3px}
+    .price-main{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--red)}
+    .price-old{font-size:0.82rem;color:#aaa;text-decoration:line-through}
+    .price-off{font-size:0.75rem;font-weight:800;color:var(--green)}
+    .price-per{font-size:0.7rem;color:var(--muted);margin-bottom:10px}
+    .prod-desc{font-size:0.76rem;color:var(--muted);line-height:1.5;margin-bottom:11px}
+    .add-btn{width:100%;background:linear-gradient(135deg,var(--gold),#a0711a);color:white;border:none;padding:10px;border-radius:8px;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.88rem;cursor:pointer;transition:all 0.2s;margin-bottom:6px}
+    .add-btn:hover{background:linear-gradient(135deg,#a0711a,var(--brown-dark));transform:translateY(-1px)}
+    .buy-btn{width:100%;background:var(--brown-dark);color:white;border:none;padding:8px;border-radius:8px;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.82rem;cursor:pointer;transition:all 0.2s}
+    .buy-btn:hover{background:var(--green)}
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:2000;opacity:0;pointer-events:none;transition:opacity 0.3s}
+    .overlay.open{opacity:1;pointer-events:all}
+    .cart-sidebar{position:fixed;top:0;right:-420px;bottom:0;width:400px;background:white;z-index:2001;transition:right 0.35s;display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,0.2)}
+    .cart-sidebar.open{right:0}
+    .cart-head{padding:18px 20px;background:var(--brown-dark);color:white;display:flex;justify-content:space-between;align-items:center}
+    .cart-head h3{font-family:'Playfair Display',serif;font-size:1.15rem}
+    .cart-close{background:rgba(255,255,255,0.15);border:none;color:white;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem}
+    .cart-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+    .cart-empty-msg{text-align:center;padding:60px 20px;color:var(--muted)}
+    .cart-empty-msg .big{font-size:3rem;margin-bottom:12px}
+    .cart-item{display:flex;gap:11px;background:#f9f9f9;border-radius:10px;padding:11px;border:1px solid #eee}
+    .cart-item-img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+    .cart-item-info{flex:1}
+    .cart-item-name{font-weight:800;font-size:0.86rem;color:var(--brown-dark);margin-bottom:2px}
+    .cart-item-wt{font-size:0.73rem;color:var(--muted);margin-bottom:4px}
+    .cart-item-price{font-weight:800;color:var(--red);font-size:0.92rem}
+    .cart-item-controls{display:flex;align-items:center;gap:7px;margin-top:5px}
+    .qbtn{background:white;border:1.5px solid #ddd;width:26px;height:26px;border-radius:6px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;font-weight:800;transition:all 0.15s}
+    .qbtn:hover{background:var(--brown-dark);color:white;border-color:var(--brown-dark)}
+    .qnum{font-weight:800;min-width:18px;text-align:center;font-size:0.9rem}
+    .rm-btn{background:none;border:none;color:var(--red);cursor:pointer;font-size:1rem;margin-left:auto}
+    .cart-foot{padding:14px 18px;border-top:2px solid #eee;background:#fafafa}
+    .cart-total-row{display:flex;justify-content:space-between;font-weight:800;font-size:1.05rem;margin-bottom:5px;color:var(--brown-dark)}
+    .cart-saving{color:var(--green);font-size:0.8rem;font-weight:700;margin-bottom:12px}
+    .checkout-wa{width:100%;background:#25D366;color:white;border:none;padding:13px;border-radius:10px;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all 0.2s}
+    .checkout-wa:hover{background:#128C7E;transform:translateY(-2px)}
+    .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--brown-dark);color:white;padding:11px 26px;border-radius:50px;font-weight:700;font-size:0.86rem;z-index:9999;display:flex;align-items:center;gap:9px;box-shadow:0 8px 30px rgba(0,0,0,0.2);transition:transform 0.4s,opacity 0.3s;opacity:0}
+    .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+    .wa-float{position:fixed;bottom:22px;right:22px;z-index:998;background:#25D366;color:white;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.5);transition:all 0.2s;animation:pulse 2s infinite}
+    .wa-float:hover{transform:scale(1.12)}
+    @keyframes pulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.5)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.85)}}
+    .order-section{background:linear-gradient(135deg,var(--brown-dark),#5c3317);padding:56px 4%;margin-top:36px}
+    .order-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .order-info h2{font-family:'Playfair Display',serif;font-size:1.9rem;color:white;margin-bottom:14px}
+    .order-info p{color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:18px}
+    .contact-list{display:flex;flex-direction:column;gap:11px}
+    .contact-item{display:flex;align-items:center;gap:10px;color:var(--gold-light);font-weight:700;font-size:0.92rem}
+    .order-form{background:white;border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:13px}
+    .order-form h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--brown-dark)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .form-group{display:flex;flex-direction:column;gap:5px}
+    label{font-weight:700;font-size:0.8rem;color:var(--brown)}
+    input,select,textarea{border:2px solid #e5e5e5;border-radius:9px;padding:10px 13px;font-family:'Nunito',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+    textarea{resize:vertical;min-height:78px}
+    .submit-btn{background:linear-gradient(135deg,var(--gold),#a0711a);color:white;border:none;padding:13px;border-radius:9px;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.95rem;cursor:pointer;transition:all 0.2s}
+    .submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,146,42,0.4)}
+    .reviews-section{padding:48px 4%;background:white}
+    .reviews-section h2{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--brown-dark);text-align:center;margin-bottom:28px}
+    .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px;max-width:1100px;margin:0 auto}
+    .review-card{background:#fafafa;border-radius:13px;padding:22px;border:1px solid #eee}
+    .review-stars{color:#f5a623;font-size:0.95rem;margin-bottom:9px}
+    .review-text{font-size:0.88rem;color:var(--muted);line-height:1.65;font-style:italic;margin-bottom:13px}
+    .reviewer{display:flex;align-items:center;gap:9px}
+    .reviewer-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    .reviewer-name{font-weight:800;font-size:0.86rem;color:var(--brown-dark)}
+    .reviewer-loc{font-size:0.73rem;color:var(--muted)}
+    footer{background:var(--brown-dark);color:rgba(255,255,255,0.72);padding:38px 4% 18px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:26px}
+    .footer-brand h3{font-family:'Playfair Display',serif;color:white;font-size:1.2rem;margin-bottom:9px}
+    .footer-brand p{font-size:0.83rem;line-height:1.7}
+    .footer-col h4{color:var(--gold-light);font-size:0.86rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+    .footer-col a{color:rgba(255,255,255,0.62);text-decoration:none;font-size:0.83rem;transition:color 0.2s}
+    .footer-col a:hover{color:var(--gold-light)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;display:flex;justify-content:space-between;font-size:0.78rem;flex-wrap:wrap;gap:8px}
+    @media(max-width:768px){
+      .hero{grid-template-columns:1fr;text-align:center}
+      .nav-search{display:none}
+      .order-inner,.footer-grid{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      .products-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+      .prod-body{padding:10px}
+      .cart-sidebar{width:100%;right:-100%}
     }
-
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Nunito', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    /* ── NAVBAR ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(253,246,236,0.92);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1.5px solid rgba(200,146,42,0.18);
-      padding: 0 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 70px;
-      box-shadow: 0 2px 24px rgba(92,51,23,0.07);
-    }
-    .nav-brand {
-      display: flex; align-items: center; gap: 12px; text-decoration: none;
-    }
-    .nav-logo {
-      width: 44px; height: 44px;
-      background: linear-gradient(135deg, var(--gold), var(--brown));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px;
-    }
-    .nav-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem; font-weight: 700;
-      color: var(--brown);
-      line-height: 1.1;
-    }
-    .nav-title span { display: block; font-size: 0.65rem; font-weight: 400; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-family: 'Nunito', sans-serif; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-actions { display: flex; align-items: center; gap: 16px; }
-    .cart-btn {
-      background: var(--brown);
-      color: var(--cream);
-      border: none; cursor: pointer;
-      padding: 10px 22px; border-radius: 50px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700; font-size: 0.9rem;
-      display: flex; align-items: center; gap: 8px;
-      transition: background 0.2s, transform 0.15s;
-      position: relative;
-    }
-    .cart-btn:hover { background: var(--gold); transform: translateY(-2px); }
-    .cart-count {
-      background: var(--gold-light);
-      color: var(--brown-dark);
-      border-radius: 50%; width: 20px; height: 20px;
-      font-size: 0.75rem; display: flex; align-items: center; justify-content: center;
-      font-weight: 800;
-    }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; }
-    .hamburger span { display: block; width: 26px; height: 2.5px; background: var(--brown); border-radius: 4px; transition: all 0.3s; }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      padding-top: 70px;
-      background: linear-gradient(135deg, #FDF6EC 0%, #F5E6D0 40%, #EDD5B0 100%);
-      display: flex; align-items: center;
-      overflow: hidden; position: relative;
-    }
-    .hero-bg-pattern {
-      position: absolute; inset: 0; pointer-events: none;
-      background-image:
-        radial-gradient(circle at 15% 25%, rgba(200,146,42,0.08) 0%, transparent 50%),
-        radial-gradient(circle at 85% 70%, rgba(92,51,23,0.06) 0%, transparent 50%);
-    }
-    .hero-inner {
-      max-width: 1200px; margin: 0 auto; padding: 80px 5%;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(200,146,42,0.12); border: 1px solid rgba(200,146,42,0.3);
-      border-radius: 50px; padding: 6px 18px; font-size: 0.82rem;
-      color: var(--gold); font-weight: 700; letter-spacing: 1px;
-      margin-bottom: 24px; text-transform: uppercase;
-      animation: fadeInUp 0.7s ease both;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 900; line-height: 1.12;
-      color: var(--brown-dark);
-      animation: fadeInUp 0.8s 0.1s ease both;
-    }
-    .hero h1 em { color: var(--gold); font-style: normal; }
-    .hero-desc {
-      margin-top: 20px; font-size: 1.05rem; line-height: 1.75;
-      color: var(--text-muted); max-width: 480px;
-      animation: fadeInUp 0.8s 0.2s ease both;
-    }
-    .hero-ctas {
-      display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap;
-      animation: fadeInUp 0.8s 0.3s ease both;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), #A0711A);
-      color: var(--white); border: none; cursor: pointer;
-      padding: 14px 36px; border-radius: 50px;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
-      text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
-      box-shadow: 0 6px 24px rgba(200,146,42,0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(200,146,42,0.45); }
-    .btn-secondary {
-      background: transparent;
-      color: var(--brown); border: 2px solid var(--brown);
-      cursor: pointer; padding: 13px 32px; border-radius: 50px;
-      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 1rem;
-      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-      transition: all 0.2s;
-    }
-    .btn-secondary:hover { background: var(--brown); color: var(--cream); }
-    .hero-stats {
-      display: flex; gap: 32px; margin-top: 48px;
-      animation: fadeInUp 0.8s 0.4s ease both;
-    }
-    .stat { text-align: center; }
-    .stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--brown); }
-    .stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-    .hero-visual {
-      display: flex; align-items: center; justify-content: center;
-      position: relative;
-      animation: fadeInRight 1s 0.2s ease both;
-    }
-    .hero-card-main {
-      background: var(--white);
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 20px 60px rgba(92,51,23,0.15);
-      width: 340px;
-      position: relative; z-index: 2;
-    }
-    .hero-fruit-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px;
-    }
-    .fruit-chip {
-      background: var(--cream);
-      border-radius: 14px; padding: 12px 8px;
-      text-align: center; font-size: 1.8rem;
-      cursor: pointer; transition: transform 0.2s, background 0.2s;
-      border: 2px solid transparent;
-    }
-    .fruit-chip:hover { transform: scale(1.12); background: var(--cream-dark); border-color: var(--gold-light); }
-    .fruit-chip p { font-size: 0.68rem; font-weight: 700; color: var(--text-muted); margin-top: 4px; }
-    .hero-card-footer { border-top: 1px solid var(--cream-dark); padding-top: 16px; display: flex; justify-content: space-between; align-items: center; }
-    .hero-card-footer .price { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--brown); font-weight: 900; }
-    .hero-card-footer .price span { font-size: 0.8rem; color: var(--text-muted); font-family: 'Nunito', sans-serif; font-weight: 400; }
-    .floating-badge {
-      position: absolute; background: var(--green); color: var(--white);
-      border-radius: 14px; padding: 10px 16px; font-size: 0.78rem; font-weight: 700;
-      box-shadow: 0 4px 20px rgba(45,106,79,0.35);
-      display: flex; align-items: center; gap: 6px;
-      animation: float 3s ease-in-out infinite;
-    }
-    .fb1 { top: -20px; right: -20px; }
-    .fb2 { bottom: 20px; left: -30px; animation-delay: 1.5s; background: var(--gold); color: var(--brown-dark); }
-
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--brown-dark);
-      padding: 18px 5%;
-      display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
-    }
-    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--cream); font-size: 0.88rem; font-weight: 600; }
-    .trust-item .icon { font-size: 1.2rem; }
-
-    /* ── SECTIONS ── */
-    section { padding: 90px 5%; max-width: 1300px; margin: 0 auto; }
-    .section-label { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); margin-bottom: 12px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--brown-dark); line-height: 1.2; }
-    .section-title em { color: var(--gold); font-style: normal; }
-
-    /* ── PRODUCTS ── */
-    #products { padding-top: 90px; }
-    .products-header { text-align: center; margin-bottom: 56px; }
-    .filter-bar { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
-    .filter-btn {
-      background: var(--white); border: 2px solid var(--cream-dark);
-      border-radius: 50px; padding: 8px 22px;
-      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.85rem;
-      color: var(--text-muted); cursor: pointer; transition: all 0.2s;
-    }
-    .filter-btn.active, .filter-btn:hover { background: var(--brown); border-color: var(--brown); color: var(--white); }
-    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 28px; }
-    .product-card {
-      background: var(--white); border-radius: var(--radius);
-      overflow: hidden; box-shadow: var(--shadow);
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
-    }
-    .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(92,51,23,0.18); }
-    .product-img {
-      height: 200px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
-      position: relative;
-    }
-    .product-badge {
-      position: absolute; top: 14px; left: 14px;
-      background: var(--green); color: var(--white);
-      border-radius: 8px; padding: 4px 12px;
-      font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
-    }
-    .product-badge.hot { background: #E05C3A; }
-    .product-badge.sale { background: var(--gold); color: var(--brown-dark); }
-    .product-info { padding: 20px; }
-    .product-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--brown-dark); margin-bottom: 6px; }
-    .product-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; }
-    .product-bottom { display: flex; justify-content: space-between; align-items: center; }
-    .product-price { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 900; color: var(--brown); }
-    .product-price .unit { font-size: 0.75rem; color: var(--text-muted); font-family: 'Nunito', sans-serif; font-weight: 600; }
-    .product-price .old-price { text-decoration: line-through; color: #bbb; font-size: 0.9rem; font-family: 'Nunito', sans-serif; margin-right: 6px; }
-    .add-btn {
-      background: var(--brown); color: var(--white);
-      border: none; cursor: pointer;
-      width: 42px; height: 42px; border-radius: 50%;
-      font-size: 1.4rem; display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 14px rgba(92,51,23,0.25);
-    }
-    .add-btn:hover { background: var(--gold); transform: scale(1.12); }
-    .stars { color: var(--gold-light); font-size: 0.85rem; margin-bottom: 10px; }
-    .stars span { color: var(--text-muted); font-size: 0.78rem; font-weight: 600; }
-
-    /* ── WHY US ── */
-    .why-section {
-      background: linear-gradient(135deg, var(--brown-dark), #5C3317);
-      border-radius: 32px; padding: 80px 8%;
-      color: var(--cream); text-align: center;
-      margin: 0 5% 90px;
-    }
-    .why-section .section-title { color: var(--cream-dark); }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 56px; }
-    .why-item .icon { font-size: 2.5rem; margin-bottom: 16px; }
-    .why-item h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 10px; color: var(--gold-light); }
-    .why-item p { font-size: 0.88rem; line-height: 1.65; color: rgba(253,246,236,0.75); }
-
-    /* ── TESTIMONIALS ── */
-    .testimonials { padding: 90px 5%; text-align: center; }
-    .testimonials-header { margin-bottom: 56px; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; }
-    .testimonial-card {
-      background: var(--white); border-radius: 20px;
-      padding: 32px; text-align: left;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s;
-    }
-    .testimonial-card:hover { transform: translateY(-4px); }
-    .t-stars { color: var(--gold); font-size: 1rem; margin-bottom: 16px; }
-    .t-text { font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px; font-style: italic; }
-    .t-author { display: flex; align-items: center; gap: 12px; }
-    .t-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
-    .t-name { font-weight: 800; font-size: 0.9rem; color: var(--brown); }
-    .t-loc { font-size: 0.78rem; color: var(--text-muted); }
-
-    /* ── ORDER FORM ── */
-    .order-section {
-      background: var(--cream-dark);
-      border-radius: 32px;
-      padding: 70px 8%;
-      margin: 0 5% 90px;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
-    }
-    .order-info h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--brown-dark); margin-bottom: 16px; }
-    .order-info p { color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; }
-    .contact-items { display: flex; flex-direction: column; gap: 14px; }
-    .contact-item { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--brown); font-size: 0.95rem; }
-    .contact-item .icon { font-size: 1.3rem; }
-    .order-form { display: flex; flex-direction: column; gap: 16px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    label { font-weight: 700; font-size: 0.85rem; color: var(--brown); }
-    input, select, textarea {
-      border: 2px solid rgba(92,51,23,0.15);
-      border-radius: 12px; padding: 12px 16px;
-      font-family: 'Nunito', sans-serif; font-size: 0.95rem;
-      background: var(--white); color: var(--text);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-    }
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(200,146,42,0.12);
-    }
-    textarea { resize: vertical; min-height: 100px; }
-    .submit-btn {
-      background: linear-gradient(135deg, var(--gold), #A0711A);
-      color: var(--white); border: none; cursor: pointer;
-      padding: 15px; border-radius: 12px;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 6px 20px rgba(200,146,42,0.35);
-    }
-    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(200,146,42,0.45); }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--brown-dark);
-      color: var(--cream);
-      padding: 60px 5% 30px;
-    }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
-    .footer-brand .nav-title { color: var(--cream); font-size: 1.4rem; margin-bottom: 16px; display: block; }
-    .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(253,246,236,0.65); }
-    .footer-col h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: 18px; color: var(--gold-light); }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col a { color: rgba(253,246,236,0.65); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--gold-light); }
-    .footer-bottom { border-top: 1px solid rgba(253,246,236,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; color: rgba(253,246,236,0.45); flex-wrap: wrap; gap: 12px; }
-    .social-links { display: flex; gap: 12px; }
-    .social-btn {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: rgba(253,246,236,0.08);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; cursor: pointer; transition: background 0.2s;
-      text-decoration: none;
-    }
-    .social-btn:hover { background: var(--gold); }
-
-    /* ── CART SIDEBAR ── */
-    .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
-    .cart-overlay.open { opacity: 1; pointer-events: all; }
-    .cart-sidebar {
-      position: fixed; top: 0; right: -420px; bottom: 0; width: 400px;
-      background: var(--white); z-index: 2001;
-      box-shadow: -10px 0 40px rgba(0,0,0,0.2);
-      transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
-      display: flex; flex-direction: column;
-    }
-    .cart-sidebar.open { right: 0; }
-    .cart-header { padding: 24px; border-bottom: 1px solid var(--cream-dark); display: flex; justify-content: space-between; align-items: center; }
-    .cart-header h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--brown-dark); }
-    .close-btn { background: var(--cream); border: none; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; font-size: 1.1rem; transition: background 0.2s; }
-    .close-btn:hover { background: var(--cream-dark); }
-    .cart-items { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 16px; }
-    .cart-empty { text-align: center; padding: 60px 20px; color: var(--text-muted); }
-    .cart-empty .empty-icon { font-size: 3rem; margin-bottom: 16px; }
-    .cart-item { display: flex; gap: 14px; background: var(--cream); border-radius: 14px; padding: 14px; }
-    .cart-item-emoji { font-size: 2rem; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 10px; }
-    .cart-item-info { flex: 1; }
-    .cart-item-name { font-weight: 700; font-size: 0.9rem; color: var(--brown-dark); margin-bottom: 4px; }
-    .cart-item-price { font-weight: 800; color: var(--gold); font-size: 0.95rem; }
-    .cart-item-controls { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
-    .qty-btn { background: var(--white); border: 1.5px solid var(--cream-dark); cursor: pointer; width: 28px; height: 28px; border-radius: 8px; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
-    .qty-btn:hover { background: var(--brown); color: var(--white); border-color: var(--brown); }
-    .qty-val { font-weight: 800; font-size: 0.9rem; min-width: 20px; text-align: center; }
-    .remove-item { background: none; border: none; cursor: pointer; color: #E05C3A; font-size: 1rem; margin-left: auto; }
-    .cart-footer { padding: 20px 24px; border-top: 1px solid var(--cream-dark); }
-    .cart-total { display: flex; justify-content: space-between; font-size: 1.1rem; font-weight: 800; color: var(--brown-dark); margin-bottom: 16px; }
-    .checkout-btn {
-      width: 100%; background: linear-gradient(135deg, var(--gold), #A0711A);
-      color: var(--white); border: none; cursor: pointer;
-      padding: 15px; border-radius: 12px;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
-      transition: transform 0.2s;
-    }
-    .checkout-btn:hover { transform: translateY(-2px); }
-
-    /* ── TOAST ── */
-    .toast {
-      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
-      background: var(--brown-dark); color: var(--cream);
-      padding: 14px 28px; border-radius: 50px;
-      font-weight: 700; font-size: 0.9rem; z-index: 3000;
-      display: flex; align-items: center; gap: 10px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-      transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s;
-      opacity: 0;
-    }
-    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-      .hero-visual { justify-content: center; }
-      .hero-card-main { width: 100%; max-width: 340px; }
-      .hero-ctas { justify-content: center; }
-      .hero-stats { justify-content: center; }
-      .hero-desc { margin: 16px auto 0; }
-      .order-section { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .why-section { margin: 0 0 60px; border-radius: 0; }
-      .order-section { margin: 0 0 60px; border-radius: 0; }
-      .cart-sidebar { width: 100%; right: -100%; }
-      .trust-bar { gap: 24px; }
-    }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Scroll animations */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s, transform 0.6s; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media(max-width:400px){.products-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
-<!-- CART OVERLAY -->
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
 <div class="cart-sidebar" id="cartSidebar">
-  <div class="cart-header">
-    <h3>🛒 Aapka Cart</h3>
-    <button class="close-btn" onclick="closeCart()">✕</button>
-  </div>
-  <div class="cart-items" id="cartItems">
-    <div class="cart-empty">
-      <div class="empty-icon">🥜</div>
-      <p>Cart khaali hai!<br>Apne pasand ke dry fruits add karein.</p>
-    </div>
-  </div>
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Kul Raqam:</span>
-      <span id="cartTotal">₹0</span>
-    </div>
-    <button class="checkout-btn" onclick="checkout()">📦 Order Karein – WhatsApp</button>
+  <div class="cart-head"><h3>🛒 Aapka Cart</h3><button class="cart-close" onclick="closeCart()">✕</button></div>
+  <div class="cart-body" id="cartBody"><div class="cart-empty-msg"><div class="big">🥜</div><p>Cart khaali hai!<br>Premium dry fruits add karein.</p></div></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Kul Raqam</span><span id="cartTotal">₹0</span></div>
+    <div class="cart-saving" id="cartSaving"></div>
+    <button class="checkout-wa" onclick="checkoutWA()">💬 WhatsApp par Order Karein</button>
   </div>
 </div>
-
-<!-- TOAST -->
 <div class="toast" id="toast">✅ Cart mein add ho gaya!</div>
+<a class="wa-float" href="https://wa.me/917007946276?text=Namaste! Saransh Dry Fruits se order karna chahta hoon." target="_blank">💬</a>
 
-<!-- NAVBAR -->
 <nav>
-  <a href="#" class="nav-brand">
-    <div class="nav-logo">🌰</div>
-    <div class="nav-title">
-      Saransh Dry Fruits
-      <span>Premium Quality</span>
-    </div>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-icon">🌰</div>
+    <div class="nav-brand-text"><h1>Saransh Dry Fruits</h1><span>Premium Quality</span></div>
   </a>
-  <ul class="nav-links">
-    <li><a href="#products">Products</a></li>
-    <li><a href="#about">Hamare Baare Mein</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="#order">Order Karein</a></li>
-  </ul>
-  <div class="nav-actions">
-    <button class="cart-btn" onclick="openCart()">
-      🛒 Cart
-      <span class="cart-count" id="cartCount">0</span>
-    </button>
-    <button class="hamburger" onclick="toggleMenu()" id="hamburger">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="nav-search"><input type="text" placeholder="Dry fruits search karein... (Badam, Kaju, Pista)"/><button>🔍</button></div>
+  <div class="nav-right">
+    <a class="wa-nav-btn" href="https://wa.me/917007946276" target="_blank">💬 WhatsApp</a>
+    <button class="cart-btn" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
-<div id="mobileMenu" style="display:none; position:fixed; top:70px; left:0; right:0; background:var(--cream); z-index:999; padding:20px; box-shadow:0 8px 30px rgba(0,0,0,0.1); border-bottom:2px solid var(--cream-dark);">
-  <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
-    <li><a href="#products" onclick="closeMobile()" style="text-decoration:none;color:var(--brown);font-weight:700;font-size:1.1rem;">🥜 Products</a></li>
-    <li><a href="#about" onclick="closeMobile()" style="text-decoration:none;color:var(--brown);font-weight:700;font-size:1.1rem;">ℹ️ Hamare Baare Mein</a></li>
-    <li><a href="#testimonials" onclick="closeMobile()" style="text-decoration:none;color:var(--brown);font-weight:700;font-size:1.1rem;">⭐ Reviews</a></li>
-    <li><a href="#order" onclick="closeMobile()" style="text-decoration:none;color:var(--brown);font-weight:700;font-size:1.1rem;">📦 Order Karein</a></li>
-  </ul>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge">🌿 100% Natural &amp; Fresh</div>
-      <h1>Premium <em>Dry Fruits</em> Seedha Aapke Ghar Tak</h1>
-      <p class="hero-desc">Saransh Dry Fruits mein aapka swagat hai! Hamare paas milte hain sabse behtareen quality ke dry fruits — fresh, pure, aur sasta. Har order mein freshness ki guarantee.</p>
-      <div class="hero-ctas">
-        <a href="#products" class="btn-primary">🛍️ Shopping Karein</a>
-        <a href="#order" class="btn-secondary">📞 Order Karein</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Happy Customers</div></div>
-        <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Products</div></div>
-        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Natural</div></div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-card-main">
-        <div class="hero-fruit-grid">
-          <div class="fruit-chip">🥜<p>Badam</p></div>
-          <div class="fruit-chip">🌰<p>Kaju</p></div>
-          <div class="fruit-chip">🍇<p>Kishmish</p></div>
-          <div class="fruit-chip">🫐<p>Akhrot</p></div>
-          <div class="fruit-chip">🌿<p>Pista</p></div>
-          <div class="fruit-chip">🍑<p>Apricot</p></div>
-        </div>
-        <div class="hero-card-footer">
-          <div>
-            <div style="font-size:0.78rem;color:var(--text-muted);font-weight:600;">Mixed Pack</div>
-            <div class="price">₹299 <span>/ 250g</span></div>
-          </div>
-          <button class="add-btn" onclick="addToCart('Mixed Premium Pack', 299, '🎁')">+</button>
-        </div>
-      </div>
-      <div class="floating-badge fb1">🌟 Best Seller</div>
-      <div class="floating-badge fb2">🚚 Free Delivery</div>
+<div class="hero">
+  <div class="hero-text">
+    <h2>India Ka <span>Sabse Premium</span><br/>Dry Fruits Store</h2>
+    <p>100% Natural • Farm Fresh • Seedha Aapke Ghar Tak.<br/>No Preservatives, No Artificial Color — Sirf Pure Quality!</p>
+    <div class="hero-badges">
+      <span class="hero-badge">✅ 100% Natural</span>
+      <span class="hero-badge">🚚 Free Delivery ₹599+</span>
+      <span class="hero-badge">💳 COD Available</span>
+      <span class="hero-badge">⭐ 4.9 Rating</span>
     </div>
   </div>
-</section>
-
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><span class="icon">🚚</span> Free Delivery ₹499+ par</div>
-  <div class="trust-item"><span class="icon">✅</span> 100% Pure &amp; Natural</div>
-  <div class="trust-item"><span class="icon">🔄</span> 7 Din Return Policy</div>
-  <div class="trust-item"><span class="icon">💳</span> UPI / COD Available</div>
-  <div class="trust-item"><span class="icon">⭐</span> 4.9 ★ Rating</div>
+  <div class="hero-img-grid">
+    <div class="hero-pcard" onclick="document.getElementById('products').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=200&q=80" alt="Badam"/><p>Badam</p></div>
+    <div class="hero-pcard" onclick="document.getElementById('products').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?w=200&q=80" alt="Kaju"/><p>Kaju</p></div>
+    <div class="hero-pcard" onclick="document.getElementById('products').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1608500213905-a34b1f67d1ea?w=200&q=80" alt="Pista"/><p>Pista</p></div>
+    <div class="hero-pcard" onclick="document.getElementById('products').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1596591868231-05e808fd4c7b?w=200&q=80" alt="Kishmish"/><p>Kishmish</p></div>
+    <div class="hero-pcard" onclick="document.getElementById('products').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=200&q=80" alt="Akhrot"/><p>Akhrot</p></div>
+    <div class="hero-pcard" onclick="document.getElementById('products').scrollIntoView()">
+      <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=200&q=80" alt="Anjeer"/><p>Anjeer</p></div>
+  </div>
 </div>
 
-<!-- PRODUCTS -->
-<section id="products" style="max-width:1300px; margin:0 auto; padding:90px 5%;">
-  <div class="products-header reveal">
-    <div class="section-label">🥜 Hamare Products</div>
-    <h2 class="section-title">Premium <em>Dry Fruits</em> Collection</h2>
-    <p style="color:var(--text-muted);margin-top:12px;font-size:0.95rem;">Direct farm se, aapke ghar tak – freshest quality guaranteed</p>
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProducts('all', this)">Sab</button>
-      <button class="filter-btn" onclick="filterProducts('nuts', this)">🥜 Nuts</button>
-      <button class="filter-btn" onclick="filterProducts('dry', this)">🍇 Dry Fruits</button>
-      <button class="filter-btn" onclick="filterProducts('seeds', this)">🌱 Seeds</button>
-      <button class="filter-btn" onclick="filterProducts('gift', this)">🎁 Gift Packs</button>
-    </div>
+<div class="trust-bar">
+  <div class="trust-item">🚚 Free Delivery ₹599+</div>
+  <div class="trust-item">✅ 100% Pure & Natural</div>
+  <div class="trust-item">🔄 7 Din Return</div>
+  <div class="trust-item">💳 COD + UPI</div>
+  <div class="trust-item">⭐ 4.9★ Rating</div>
+  <div class="trust-item">📦 Same Day Packing</div>
+</div>
+
+<div class="cat-section">
+  <div class="cat-tabs">
+    <button class="cat-tab active" onclick="filterCat('all',this)">🌟 Sab Products</button>
+    <button class="cat-tab" onclick="filterCat('nuts',this)">🥜 Nuts</button>
+    <button class="cat-tab" onclick="filterCat('dry',this)">🍇 Dry Fruits</button>
+    <button class="cat-tab" onclick="filterCat('seeds',this)">🌱 Seeds & More</button>
+    <button class="cat-tab" onclick="filterCat('gift',this)">🎁 Gift Packs</button>
+  </div>
+</div>
+
+<div class="products-section" id="products">
+  <div class="sec-header">
+    <h2>🥜 Hamare Products</h2>
+    <span style="color:var(--muted);font-size:0.83rem" id="productCount"></span>
   </div>
   <div class="products-grid" id="productsGrid"></div>
-</section>
+</div>
 
-<!-- WHY US -->
-<div class="why-section reveal" id="about">
-  <div class="section-label" style="color:var(--gold-light);">💫 Kyun Chunein Hume</div>
-  <h2 class="section-title" style="color:var(--cream);">Saransh Dry Fruits Kyun <em>Special</em> Hai?</h2>
-  <div class="why-grid">
-    <div class="why-item">
-      <div class="icon">🌿</div>
-      <h3>100% Natural</h3>
-      <p>Koi artificial color ya preservative nahi. Seedha farm se aapke ghar tak, purey natural.</p>
-    </div>
-    <div class="why-item">
-      <div class="icon">⚖️</div>
-      <h3>Sahi Wajan</h3>
-      <p>Har pack bilkul sahi wajan ke sath — koi cheat nahi. Jo likha hai wo hi milega.</p>
-    </div>
-    <div class="why-item">
-      <div class="icon">🚚</div>
-      <h3>Fast Delivery</h3>
-      <p>Order karo aur 1-3 din mein ghar par pao. ₹499 se upar free delivery!</p>
-    </div>
-    <div class="why-item">
-      <div class="icon">💰</div>
-      <h3>Best Prices</h3>
-      <p>Market se sasta — seedha seller se kharido, beech waale ki zaroorat nahi.</p>
-    </div>
-    <div class="why-item">
-      <div class="icon">🎁</div>
-      <h3>Gift Packing</h3>
-      <p>Shaadi, birthday ya koi bhi occasion ke liye sundar gift packing available.</p>
-    </div>
-    <div class="why-item">
-      <div class="icon">📱</div>
-      <h3>Easy Order</h3>
-      <p>WhatsApp ya website se asaani se order karein. COD aur UPI dono available.</p>
-    </div>
+<div class="reviews-section">
+  <h2>⭐ Hamare Happy Customers</h2>
+  <div class="reviews-grid">
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"California Badam ekdum taza aur crispy mila! Packing bhi bahut achi thi. Delivery 2 din mein aa gayi. Definitely order karoonga dobara!"</p><div class="reviewer"><div class="reviewer-av" style="background:#FEE8C5">👨</div><div><div class="reviewer-name">Rahul Sharma</div><div class="reviewer-loc">📍 Delhi</div></div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Kaju W320 grade mila — bilkul market se acha aur price bhi kam tha. Saransh Dry Fruits se hi lunga ab hamesha!"</p><div class="reviewer"><div class="reviewer-av" style="background:#D4F0E0">👩</div><div><div class="reviewer-name">Priya Mehra</div><div class="reviewer-loc">📍 Mumbai</div></div></div></div>
+    <div class="review-card"><div class="review-stars">★★★★★</div><p class="review-text">"Shaadi ke liye gift pack order kiya. Presentation ekdum top class thi. Mehmaan bahut khush hue. Quality is too good!"</p><div class="reviewer"><div class="reviewer-av" style="background:#E8D5FE">👨‍👩‍👧</div><div><div class="reviewer-name">Amit Verma</div><div class="reviewer-loc">📍 Jaipur</div></div></div></div>
   </div>
 </div>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials reveal" id="testimonials" style="max-width:1300px; margin:0 auto;">
-  <div class="testimonials-header">
-    <div class="section-label">⭐ Customer Reviews</div>
-    <h2 class="section-title">Hamare <em>Happy Customers</em> Kehte Hain</h2>
-  </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-text">"Wah! Kaju aur badam dono ekdum fresh the. Ghar mein sab ne tariff ki. Packing bhi bahut achhi thi. Ab main sirf yahaan se hi lunga!"</p>
-      <div class="t-author">
-        <div class="t-avatar" style="background:#FEE8C5;">👨</div>
-        <div><div class="t-name">Rahul Sharma</div><div class="t-loc">Delhi</div></div>
+<div class="order-section" id="order">
+  <div class="order-inner">
+    <div class="order-info">
+      <h2>📦 Order Karein Abhi</h2>
+      <p>WhatsApp par message karein ya form fill karein. Hum 30 minute mein reply karenge aur order confirm karenge!</p>
+      <div class="contact-list">
+        <div class="contact-item">📱 WhatsApp: +91 70079 46276</div>
+        <div class="contact-item">📞 Call: +91 70079 46276</div>
+        <div class="contact-item">📧 bznsbysaransh@gmail.com</div>
+        <div class="contact-item">🕐 Mon–Sat: 9 AM – 9 PM</div>
+        <div class="contact-item">🚚 Free Delivery ₹599+ par</div>
+        <div class="contact-item">💳 UPI / COD / Bank Transfer</div>
       </div>
     </div>
-    <div class="testimonial-card">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-text">"Mene pista mangwaya tha, ekdum fresh aur crispy mila. Price bhi market se kam hai. Delivery bhi 2 din mein aa gayi. Highly recommended!"</p>
-      <div class="t-author">
-        <div class="t-avatar" style="background:#D4F0E0;">👩</div>
-        <div><div class="t-name">Priya Mehra</div><div class="t-loc">Mumbai</div></div>
-      </div>
-    </div>
-    <div class="testimonial-card">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-text">"Shaadi mein gift packing ke liye order kiya tha. Sab log impressed ho gaye. Quality top-class thi. Bohot shukriya Saransh!"</p>
-      <div class="t-author">
-        <div class="t-avatar" style="background:#E8D5FE;">👨‍👩‍👧</div>
-        <div><div class="t-name">Amit Verma</div><div class="t-loc">Jaipur</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ORDER FORM -->
-<div class="order-section reveal" id="order">
-  <div class="order-info">
-    <div class="section-label">📦 Order Karein</div>
-    <h2>Abhi Order <em>Karein</em></h2>
-    <p>Form fill karein ya seedha WhatsApp karein. Hum jaldi se reply karenge aur aapka order confirm karenge.</p>
-    <div class="contact-items">
-      <div class="contact-item"><span class="icon">📱</span> WhatsApp: +91 70079 46276</div>
-      <div class="contact-item"><span class="icon">📞</span> Call: +91 70079 46276</div>
-      <div class="contact-item"><span class="icon">📧</span> bznsbysaransh@gmail.com</div>
-      <div class="contact-item"><span class="icon">🕐</span> Mon–Sat: 9 AM – 8 PM</div>
-      <div class="contact-item"><span class="icon">🚚</span> Free Delivery ₹499+ par</div>
-    </div>
-  </div>
-  <div>
-    <form class="order-form" onsubmit="submitOrder(event)">
-      <div class="form-row">
-        <div class="form-group">
-          <label>Aapka Naam *</label>
-          <input type="text" placeholder="Jaise: Ravi Kumar" required />
+    <div>
+      <form class="order-form" onsubmit="submitOrder(event)">
+        <h3>🛒 Order Form</h3>
+        <div class="form-row">
+          <div class="form-group"><label>Aapka Naam *</label><input type="text" placeholder="Jaise: Ravi Kumar" required/></div>
+          <div class="form-group"><label>Phone *</label><input type="tel" placeholder="+91 70079 46276" required/></div>
         </div>
-        <div class="form-group">
-          <label>Phone Number *</label>
-          <input type="tel" placeholder="+91 70079 46276" required />
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="aapka@email.com" />
-      </div>
-      <div class="form-group">
-        <label>Product Select Karein *</label>
-        <select required id="orderProduct">
-          <option value="">-- Product Chunein --</option>
-          <option>Premium Badam – ₹350/500g</option>
-          <option>Kaju W320 – ₹550/500g</option>
-          <option>Pista Irani – ₹650/500g</option>
-          <option>Akhrot Giri – ₹480/500g</option>
-          <option>Kishmish Green – ₹180/500g</option>
-          <option>Anjeer – ₹420/500g</option>
-          <option>Khajoor Medjool – ₹750/kg</option>
-          <option>Mixed Premium Pack – ₹599/500g</option>
-          <option>Corporate Gift Pack – ₹999</option>
-          <option>Aur products bhi (form mein likhein)</option>
-        </select>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Matra (Quantity)</label>
-          <input type="text" placeholder="Jaise: 1kg, 500g" />
-        </div>
-        <div class="form-group">
-          <label>Payment Mode</label>
-          <select>
-            <option>UPI / Google Pay</option>
-            <option>Cash on Delivery</option>
-            <option>Bank Transfer</option>
+        <div class="form-group"><label>Product *</label>
+          <select required id="orderProd">
+            <option value="">-- Product Chunein --</option>
+            <option>California Badam – ₹259/250g | ₹499/500g | ₹949/kg</option>
+            <option>Kaju W320 – ₹349/250g | ₹649/500g | ₹1,199/kg</option>
+            <option>Irani Pista – ₹319/250g | ₹599/500g | ₹1,099/kg</option>
+            <option>Kashmiri Akhrot – ₹229/250g | ₹429/500g | ₹799/kg</option>
+            <option>Kishmish Green – ₹99/250g | ₹179/500g | ₹329/kg</option>
+            <option>Munakka Kala – ₹119/250g | ₹219/500g | ₹399/kg</option>
+            <option>Anjeer Afghani – ₹249/250g | ₹469/500g | ₹899/kg</option>
+            <option>Khajoor Medjool – ₹249/250g | ₹449/500g | ₹849/kg</option>
+            <option>Khumani (Apricot) – ₹149/250g | ₹279/500g | ₹529/kg</option>
+            <option>Makhana Fox Nut – ₹179/250g | ₹329/500g | ₹599/kg</option>
+            <option>Premium Gift Pack – ₹999 / ₹1,499 / ₹2,499</option>
           </select>
         </div>
-      </div>
-      <div class="form-group">
-        <label>Delivery Address *</label>
-        <textarea placeholder="Poora address likhein — ghar no., mohalla, sheher, pincode" required></textarea>
-      </div>
-      <div class="form-group">
-        <label>Koi Aur Baat?</label>
-        <textarea placeholder="Koi special request ya sawaal..." style="min-height:70px;"></textarea>
-      </div>
-      <button type="submit" class="submit-btn">📲 Order Submit Karein</button>
-    </form>
+        <div class="form-row">
+          <div class="form-group"><label>Matra</label><select><option>250g</option><option selected>500g</option><option>1 Kg</option><option>2 Kg</option><option>Bulk Order</option></select></div>
+          <div class="form-group"><label>Payment</label><select><option>UPI / Google Pay</option><option>Cash on Delivery</option><option>Bank Transfer</option></select></div>
+        </div>
+        <div class="form-group"><label>Delivery Address *</label><textarea placeholder="Ghar no., mohalla, sheher, pincode..." required></textarea></div>
+        <button type="submit" class="submit-btn">📲 WhatsApp par Order Bhejein →</button>
+      </form>
+    </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="nav-title">🌰 Saransh Dry Fruits</span>
-      <p>Premium quality dry fruits — fresh, natural, aur affordable. Seedha farm se aapke ghar tak. Hamare saath shopping karein aur freshness ka fark mehsoos karein.</p>
-      <div class="social-links" style="margin-top:20px;">
-        <a class="social-btn" href="https://wa.me/917007946276" target="_blank">📱</a>
-        <a class="social-btn" href="#" target="_blank">📸</a>
-        <a class="social-btn" href="#" target="_blank">👍</a>
+      <h3>🌰 Saransh Dry Fruits</h3>
+      <p>Premium quality dry fruits — 100% natural, fresh aur affordable. Seedha farm se aapke ghar tak. Hamare saath shopping karein aur freshness ka fark mehsoos karein!</p>
+      <div style="display:flex;gap:9px;margin-top:14px">
+        <a href="https://wa.me/917007946276" target="_blank" style="background:rgba(255,255,255,0.1);color:white;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none">💬</a>
+        <a href="#" style="background:rgba(255,255,255,0.1);color:white;width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none">📸</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#home">🏠 Home</a></li>
-        <li><a href="#products">🥜 Products</a></li>
-        <li><a href="#about">ℹ️ About Us</a></li>
-        <li><a href="#testimonials">⭐ Reviews</a></li>
-        <li><a href="#order">📦 Order</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Products</h4>
-      <ul>
-        <li><a href="#products">Badam</a></li>
-        <li><a href="#products">Kaju</a></li>
-        <li><a href="#products">Pista</a></li>
-        <li><a href="#products">Akhrot</a></li>
-        <li><a href="#products">Kishmish</a></li>
-        <li><a href="#products">Gift Packs</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Policies</h4>
-      <ul>
-        <li><a href="#">Return Policy</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Shipping Info</a></li>
-        <li><a href="#">Terms of Use</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#products">🥜 Products</a></li><li><a href="#order">📦 Order</a></li><li><a href="https://wa.me/917007946276" target="_blank">💬 WhatsApp</a></li></ul></div>
+    <div class="footer-col"><h4>Products</h4><ul><li><a href="#products">Badam • Kaju • Pista</a></li><li><a href="#products">Akhrot • Kishmish</a></li><li><a href="#products">Anjeer • Khajoor</a></li><li><a href="#products">Gift Packs</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <div>© 2024 Saransh Dry Fruits. Sabhi adhikar surakshit.</div>
-    <div style="display:flex;align-items:center;gap:8px;">💳 UPI &nbsp;|&nbsp; COD &nbsp;|&nbsp; 🔒 Secure</div>
+    <span>© 2024 Saransh Dry Fruits. Sabhi adhikar surakshit.</span>
+    <span>📞 +91 70079 46276 | 📧 bznsbysaransh@gmail.com</span>
   </div>
 </footer>
 
 <script>
-  // ── PRODUCT DATA ──
-  const products = [
-    { id:1, name:'Premium Badam', emoji:'🥜', desc:'California se mangaye ekdum taze aur crispy badam. Protein aur Vitamin E se bharpur.', price:350, oldPrice:420, unit:'500g', badge:'Best Seller', badgeClass:'', category:'nuts' },
-    { id:2, name:'Kaju W320', emoji:'🌰', desc:'Mewa-grade premium kaju. Creamy texture aur rich taste ke sath. Bilkul natural.', price:550, oldPrice:650, unit:'500g', badge:'Popular', badgeClass:'hot', category:'nuts' },
-    { id:3, name:'Pista Irani', emoji:'🌿', desc:'Iran se imported premium pista. Naturally open aur full of flavor.', price:650, oldPrice:800, unit:'500g', badge:'Premium', badgeClass:'', category:'nuts' },
-    { id:4, name:'Akhrot Giri', emoji:'🫐', desc:'Kashmiri akhrot seedha pahad se. Brain health ke liye best, Omega-3 se bharpoor.', price:480, oldPrice:580, unit:'500g', badge:'', badgeClass:'', category:'nuts' },
-    { id:5, name:'Kishmish Green', emoji:'🍇', desc:'Seedless hari kishmish, natural meethi aur juicy. Har umra ke log piya pasand karein.', price:180, oldPrice:220, unit:'500g', badge:'Sale', badgeClass:'sale', category:'dry' },
-    { id:6, name:'Anjeer Dry', emoji:'🍑', desc:'Kabj aur haemoglobin ke liye best anjeer. Natural sweetness aur chewy texture.', price:420, oldPrice:500, unit:'500g', badge:'', badgeClass:'', category:'dry' },
-    { id:7, name:'Khajoor Medjool', emoji:'🌴', desc:'King of dates — Medjool khajoor. Energy, fiber aur iron ka behtareen source.', price:750, oldPrice:900, unit:'kg', badge:'Hot', badgeClass:'hot', category:'dry' },
-    { id:8, name:'Kala Kismis', emoji:'🫐', desc:'Seedless kali kishmish rich in antioxidants. Perfect for sweets and daily snacking.', price:200, oldPrice:250, unit:'500g', badge:'', badgeClass:'', category:'dry' },
-    { id:9, name:'Watermelon Seeds', emoji:'🌱', desc:'Roasted watermelon seeds — protein se bharpur healthy snack. No preservatives.', price:220, oldPrice:280, unit:'500g', badge:'New', badgeClass:'', category:'seeds' },
-    { id:10, name:'Flax Seeds', emoji:'🌿', desc:'Omega-3 aur fiber ka powerhouse. Daily diet mein add karein.', price:120, oldPrice:150, unit:'500g', badge:'', badgeClass:'', category:'seeds' },
-    { id:11, name:'Sunflower Seeds', emoji:'🌻', desc:'Roasted sunflower seeds — healthy snack for all ages. Vitamin E ka acha source.', price:150, oldPrice:190, unit:'500g', badge:'', badgeClass:'', category:'seeds' },
-    { id:12, name:'Premium Gift Pack', emoji:'🎁', desc:'Shaadi, birthday ya kisi bhi khushie ke liye sundar gift box mein premium dry fruits.', price:999, oldPrice:1299, unit:'Set', badge:'Gift', badgeClass:'sale', category:'gift' },
-    { id:13, name:'Corporate Pack', emoji:'🏢', desc:'Office gifting ke liye bulk packs available. Branding bhi possible. Call karein.', price:599, oldPrice:799, unit:'Set', badge:'Bulk', badgeClass:'', category:'gift' },
-    { id:14, name:'Mixed Premium Pack', emoji:'🎊', desc:'Badam, kaju, pista, akhrot aur kishmish ka mix — perfect starter pack.', price:299, oldPrice:399, unit:'250g', badge:'Top Pick', badgeClass:'hot', category:'gift' },
-  ];
+const products=[
+  {id:1,cat:'nuts',name:'California Badam',sub:'Premium Almonds – California Grade',img:'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&q=80',tag:'Best Seller',tc:'tag-best',desc:'America se mangaye ekdum taze aur crispy badam. Protein, Vitamin E aur Omega-3 se bharpur. Subah 8-10 badam khana sehat ke liye best.',prices:{250:259,500:499,1000:949},old:{250:320,500:620,1000:1190},rating:4.9,rv:1240},
+  {id:2,cat:'nuts',name:'Kaju W320 Grade',sub:'Premium Cashews – Whole',img:'https://images.unsplash.com/photo-1563636619-e9143da7973b?w=400&q=80',tag:'Popular',tc:'tag-best',desc:'W320 grade premium kaju — creamy texture aur natural sweetness. Bilkul natural, no processing. Mithai aur snacking ke liye best.',prices:{250:349,500:649,1000:1199},old:{250:430,500:800,1000:1490},rating:4.8,rv:980},
+  {id:3,cat:'nuts',name:'Irani Pista',sub:'Premium Pistachios – Naturally Open',img:'https://images.unsplash.com/photo-1608500213905-a34b1f67d1ea?w=400&q=80',tag:'Premium',tc:'tag-premium',desc:'Iran se imported naturally open pista. Rich flavor aur crunchy texture. Antioxidants se bharpur, heart ke liye bahut faydemand.',prices:{250:319,500:599,1000:1099},old:{250:400,500:750,1000:1380},rating:4.9,rv:654},
+  {id:4,cat:'nuts',name:'Kashmiri Akhrot Giri',sub:'Walnut Kernels – Without Shell',img:'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=400&q=80',tag:'Fresh',tc:'tag-fresh',desc:'Kashmiri pahad se seedha akhrot. Brain health ke liye best — Omega-3 fatty acids se bharpur. Daily diet mein zaroor shamil karein.',prices:{250:229,500:429,1000:799},old:{250:290,500:540,1000:1000},rating:4.8,rv:823},
+  {id:5,cat:'dry',name:'Kishmish Green',sub:'Seedless Green Raisins – Afghan',img:'https://images.unsplash.com/photo-1596591868231-05e808fd4c7b?w=400&q=80',tag:'',tc:'',desc:'Seedless hari kishmish, natural meethi aur juicy. Iron aur antioxidants se bharpur. Kheer, halwa aur daily snacking ke liye perfect.',prices:{250:99,500:179,1000:329},old:{250:130,500:230,1000:430},rating:4.7,rv:1560},
+  {id:6,cat:'dry',name:'Munakka Kala',sub:'Black Raisins – Seedless',img:'https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=400&q=80',tag:'Fresh',tc:'tag-fresh',desc:'Kali seedless munakka — iron aur haemoglobin ke liye best. Khoon badhata hai. Raat ko paani mein bhigo ke subah khayein.',prices:{250:119,500:219,1000:399},old:{250:160,500:280,1000:520},rating:4.8,rv:734},
+  {id:7,cat:'dry',name:'Anjeer Afghani',sub:'Dried Figs – Premium Quality',img:'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=400&q=80',tag:'Premium',tc:'tag-premium',desc:'Afghanistan se imported bade size anjeer. Fiber aur iron se bharpur. Kabj door karta hai. Soft aur chewy texture.',prices:{250:249,500:469,1000:899},old:{250:320,500:600,1000:1150},rating:4.9,rv:445},
+  {id:8,cat:'dry',name:'Khajoor Medjool',sub:'King of Dates – Premium',img:'https://images.unsplash.com/photo-1566842600175-97dca489844f?w=400&q=80',tag:'Best Seller',tc:'tag-best',desc:'King of Dates — Medjool khajoor. Natural energy, fiber aur iron ka powerhouse. Gym ke baad ya breakfast mein perfect.',prices:{250:249,500:449,1000:849},old:{250:320,500:580,1000:1080},rating:4.9,rv:1120},
+  {id:9,cat:'dry',name:'Khumani (Apricot)',sub:'Dried Apricots – Natural',img:'https://images.unsplash.com/photo-1597362925123-77861d3fbac7?w=400&q=80',tag:'',tc:'',desc:'Natural sun-dried khumani. Vitamin A aur C se bharpur. Iron ki kami door karta hai. Pregnant women ke liye bahut faydemand.',prices:{250:149,500:279,1000:529},old:{250:200,500:360,1000:680},rating:4.7,rv:389},
+  {id:10,cat:'seeds',name:'Makhana Fox Nut',sub:'Lotus Seeds – Roasted',img:'https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=400&q=80',tag:'Fresh',tc:'tag-fresh',desc:'Crispy roasted makhana — low calorie, high protein snack. Vrat mein bhi perfect. Calcium aur magnesium se bharpur.',prices:{250:179,500:329,1000:599},old:{250:240,500:430,1000:780},rating:4.8,rv:892},
+  {id:11,cat:'seeds',name:'Watermelon Seeds',sub:'Roasted & Salted – No Preservatives',img:'https://images.unsplash.com/photo-1628156563321-0a19ebf3b65e?w=400&q=80',tag:'',tc:'',desc:'Roasted watermelon seeds — protein se bharpur healthy snack. No preservatives, no artificial color. Office snacking perfect.',prices:{250:129,500:239,1000:449},old:{250:170,500:310,1000:580},rating:4.6,rv:234},
+  {id:12,cat:'gift',name:'Premium Gift Pack – Small',sub:'Badam + Kaju + Pista + Kishmish Mix',img:'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&q=80',tag:'Gift',tc:'tag-best',desc:'Shaadi, birthday, Diwali, Eid — har occasion ke liye sundar gift box. Premium quality dry fruits ka perfect mix.',prices:{250:799,500:1499,1000:2499},old:{250:999,500:1899,1000:3199},rating:5.0,rv:567},
+  {id:13,cat:'gift',name:'Corporate Gift Pack',sub:'Bulk Gifting – Branding Available',img:'https://images.unsplash.com/photo-1512909006721-3d6018887383?w=400&q=80',tag:'Bulk',tc:'tag-premium',desc:'Office gifting ke liye bulk packs. Custom branding bhi available. 50+ orders par special discount. Call karein details ke liye.',prices:{250:599,500:999,1000:1799},old:{250:799,500:1299,1000:2299},rating:4.9,rv:145},
+];
 
-  let cart = [];
-  let currentFilter = 'all';
+let cart=[];
+let selW={};
+products.forEach(p=>selW[p.id]=500);
 
-  function renderProducts(filter) {
-    const grid = document.getElementById('productsGrid');
-    const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
-    grid.innerHTML = filtered.map(p => `
-      <div class="product-card reveal">
-        <div class="product-img" style="background:${getBg(p.category)}">
-          ${p.badge ? `<div class="product-badge ${p.badgeClass}">${p.badge}</div>` : ''}
-          <span>${p.emoji}</span>
-        </div>
-        <div class="product-info">
-          <div class="stars">★★★★★ <span>(4.9)</span></div>
-          <div class="product-name">${p.name}</div>
-          <div class="product-desc">${p.desc}</div>
-          <div class="product-bottom">
-            <div class="product-price">
-              <span class="old-price">₹${p.oldPrice}</span>
-              ₹${p.price} <span class="unit">/ ${p.unit}</span>
-            </div>
-            <button class="add-btn" onclick="addToCart('${p.name}', ${p.price}, '${p.emoji}')">+</button>
-          </div>
-        </div>
+function wLabel(w){return w==1000?'1 Kg':w+'g'}
+
+function renderProducts(cat){
+  const grid=document.getElementById('productsGrid');
+  const filtered=cat==='all'?products:products.filter(p=>p.cat===cat);
+  document.getElementById('productCount').textContent=filtered.length+' products';
+  grid.innerHTML=filtered.map(p=>`
+    <div class="product-card">
+      <div class="prod-img-wrap">
+        <img src="${p.img}" alt="${p.name}" loading="lazy"/>
+        ${p.tag?`<span class="prod-tag ${p.tc}">${p.tag}</span>`:''}
+        <button class="wish-btn" onclick="showToast('❤️ Wishlist mein add hua!')">🤍</button>
       </div>
-    `).join('');
-    observeReveal();
-  }
+      <div class="prod-body">
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-sub">${p.sub}</div>
+        <div class="stars">★★★★${p.rating>=4.9?'★':'½'} <span>(${p.rv.toLocaleString()} reviews)</span></div>
+        <div class="weight-sel" id="ws-${p.id}">
+          ${Object.keys(p.prices).map(w=>`<button class="wbtn ${parseInt(w)===selW[p.id]?'active':''}" onclick="selWeight(${p.id},${w},this)">${wLabel(parseInt(w))}</button>`).join('')}
+        </div>
+        <div class="price-row">
+          <span class="price-main" id="pm-${p.id}">₹${p.prices[selW[p.id]]}</span>
+          <span class="price-old" id="po-${p.id}">₹${p.old[selW[p.id]]}</span>
+          <span class="price-off" id="poff-${p.id}">${Math.round((1-p.prices[selW[p.id]]/p.old[selW[p.id]])*100)}% OFF</span>
+        </div>
+        <div class="price-per" id="pp-${p.id}">₹${Math.round(p.prices[selW[p.id]]/(selW[p.id]/1000))}/kg ke hisaab se</div>
+        <p class="prod-desc">${p.desc}</p>
+        <button class="add-btn" onclick="addToCart(${p.id})">🛒 Cart Mein Add Karein</button>
+        <button class="buy-btn" onclick="buyNow(${p.id})">⚡ Abhi Khareedein – WhatsApp</button>
+      </div>
+    </div>`).join('');
+}
 
-  function getBg(cat) {
-    const bgs = { nuts:'linear-gradient(135deg,#FEF3E2,#FDDCB5)', dry:'linear-gradient(135deg,#E8F5E9,#C8E6C9)', seeds:'linear-gradient(135deg,#F3E5F5,#E1BEE7)', gift:'linear-gradient(135deg,#FFF9E6,#FFF0B3)' };
-    return bgs[cat] || bgs.nuts;
-  }
+function selWeight(pid,w,btn){
+  selW[pid]=w;
+  const p=products.find(x=>x.id===pid);
+  document.getElementById('pm-'+pid).textContent='₹'+p.prices[w];
+  document.getElementById('po-'+pid).textContent='₹'+p.old[w];
+  document.getElementById('poff-'+pid).textContent=Math.round((1-p.prices[w]/p.old[w])*100)+'% OFF';
+  document.getElementById('pp-'+pid).textContent='₹'+Math.round(p.prices[w]/(w/1000))+'/kg ke hisaab se';
+  document.querySelectorAll('#ws-'+pid+' .wbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
 
-  function filterProducts(cat, btn) {
-    currentFilter = cat;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderProducts(cat);
-  }
+function addToCart(pid){
+  const p=products.find(x=>x.id===pid);
+  const w=selW[pid];
+  const key=pid+'-'+w;
+  const ex=cart.find(i=>i.key===key);
+  if(ex)ex.qty++;
+  else cart.push({key,pid,w,name:p.name,img:p.img,price:p.prices[w],qty:1});
+  updateCart();
+  showToast('✅ '+p.name+' ('+wLabel(w)+') cart mein add hua!');
+}
 
-  // ── CART ──
-  function addToCart(name, price, emoji) {
-    const existing = cart.find(i => i.name === name);
-    if (existing) { existing.qty++; }
-    else { cart.push({ name, price, emoji, qty: 1 }); }
-    updateCartUI();
-    showToast(`${emoji} ${name} cart mein add hua!`);
-  }
+function buyNow(pid){
+  addToCart(pid);
+  const p=products.find(x=>x.id===pid);
+  const w=selW[pid];
+  const msg='🌰 *Saransh Dry Fruits*\n\nMujhe order karna hai:\n• '+p.name+' – '+wLabel(w)+' – ₹'+p.prices[w]+'\n\nKripya confirm karein!';
+  window.open('https://wa.me/917007946276?text='+encodeURIComponent(msg),'_blank');
+}
 
-  function removeFromCart(name) {
-    cart = cart.filter(i => i.name !== name);
-    updateCartUI();
-  }
+function removeFromCart(key){cart=cart.filter(i=>i.key!==key);updateCart();}
+function changeQty(key,d){const i=cart.find(x=>x.key===key);if(!i)return;i.qty+=d;if(i.qty<=0)removeFromCart(key);else updateCart();}
 
-  function changeQty(name, delta) {
-    const item = cart.find(i => i.name === name);
-    if (!item) return;
-    item.qty += delta;
-    if (item.qty <= 0) removeFromCart(name);
-    else updateCartUI();
-  }
-
-  function updateCartUI() {
-    const count = cart.reduce((s, i) => s + i.qty, 0);
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    document.getElementById('cartCount').textContent = count;
-    document.getElementById('cartTotal').textContent = `₹${total.toLocaleString()}`;
-    const cartItems = document.getElementById('cartItems');
-    if (cart.length === 0) {
-      cartItems.innerHTML = `<div class="cart-empty"><div class="empty-icon">🥜</div><p>Cart khaali hai!<br>Apne pasand ke dry fruits add karein.</p></div>`;
-    } else {
-      cartItems.innerHTML = cart.map(item => `
-        <div class="cart-item">
-          <div class="cart-item-emoji">${item.emoji}</div>
-          <div class="cart-item-info">
-            <div class="cart-item-name">${item.name}</div>
-            <div class="cart-item-price">₹${(item.price * item.qty).toLocaleString()}</div>
-            <div class="cart-item-controls">
-              <button class="qty-btn" onclick="changeQty('${item.name}', -1)">−</button>
-              <span class="qty-val">${item.qty}</span>
-              <button class="qty-btn" onclick="changeQty('${item.name}', 1)">+</button>
-              <button class="remove-item" onclick="removeFromCart('${item.name}')">🗑️</button>
-            </div>
+function updateCart(){
+  const count=cart.reduce((s,i)=>s+i.qty,0);
+  const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  document.getElementById('cartCount').textContent=count;
+  document.getElementById('cartTotal').textContent='₹'+total.toLocaleString();
+  const body=document.getElementById('cartBody');
+  if(!cart.length){
+    body.innerHTML='<div class="cart-empty-msg"><div class="big">🥜</div><p>Cart khaali hai!<br>Premium dry fruits add karein.</p></div>';
+    document.getElementById('cartSaving').textContent='';
+  } else {
+    body.innerHTML=cart.map(i=>`
+      <div class="cart-item">
+        <img class="cart-item-img" src="${i.img}" alt="${i.name}"/>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${i.name}</div>
+          <div class="cart-item-wt">${wLabel(i.w)}</div>
+          <div class="cart-item-price">₹${(i.price*i.qty).toLocaleString()}</div>
+          <div class="cart-item-controls">
+            <button class="qbtn" onclick="changeQty('${i.key}',-1)">−</button>
+            <span class="qnum">${i.qty}</span>
+            <button class="qbtn" onclick="changeQty('${i.key}',1)">+</button>
+            <button class="rm-btn" onclick="removeFromCart('${i.key}')">🗑️</button>
           </div>
         </div>
-      `).join('');
-    }
+      </div>`).join('');
+    document.getElementById('cartSaving').textContent=total>=599?'🎉 Free delivery milegi!':'₹'+(599-total)+' aur add karein – free delivery!';
   }
+}
 
-  function openCart() {
-    document.getElementById('cartSidebar').classList.add('open');
-    document.getElementById('cartOverlay').classList.add('open');
-  }
+function openCart(){document.getElementById('cartSidebar').classList.add('open');document.getElementById('overlay').classList.add('open');}
+function closeCart(){document.getElementById('cartSidebar').classList.remove('open');document.getElementById('overlay').classList.remove('open');}
 
-  function closeCart() {
-    document.getElementById('cartSidebar').classList.remove('open');
-    document.getElementById('cartOverlay').classList.remove('open');
-  }
+function checkoutWA(){
+  if(!cart.length){showToast('❌ Pehle kuch add karein!');return;}
+  const total=cart.reduce((s,i)=>s+i.price*i.qty,0);
+  let msg='🌰 *Saransh Dry Fruits – Naya Order*\n\n';
+  cart.forEach(i=>{msg+=`• ${i.name} (${wLabel(i.w)}) x${i.qty} = ₹${(i.price*i.qty).toLocaleString()}\n`;});
+  msg+=`\n💰 *Kul: ₹${total.toLocaleString()}*\n\nKripya order confirm karein! 🙏`;
+  window.open('https://wa.me/917007946276?text='+encodeURIComponent(msg),'_blank');
+}
 
-  function checkout() {
-    if (cart.length === 0) { showToast('❌ Pehle kuch add karein!'); return; }
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    let msg = `🌰 *Saransh Dry Fruits – New Order*\n\n`;
-    cart.forEach(i => { msg += `• ${i.emoji} ${i.name} x${i.qty} = ₹${(i.price * i.qty).toLocaleString()}\n`; });
-    msg += `\n💰 *Kul Raqam: ₹${total.toLocaleString()}*\n\nPlease confirm my order!`;
-    window.open(`https://wa.me/917007946276?text=${encodeURIComponent(msg)}`, '_blank');
-  }
+function submitOrder(e){
+  e.preventDefault();
+  const prod=document.getElementById('orderProd').value;
+  const msg='🌰 *Saransh Dry Fruits – Website Order*\n\nProduct: '+prod+'\n\nKripya order confirm karein! 🙏';
+  window.open('https://wa.me/917007946276?text='+encodeURIComponent(msg),'_blank');
+  showToast('✅ WhatsApp par redirect ho raha hai!');
+}
 
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2800);
-  }
+function filterCat(cat,btn){
+  document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(cat);
+}
 
-  // ── ORDER FORM ──
-  function submitOrder(e) {
-    e.preventDefault();
-    const product = document.getElementById('orderProduct').value;
-    const msg = `🌰 *Saransh Dry Fruits – Website Order*\n\nProduct: ${product}\n\nKripya order confirm karein!`;
-    window.open(`https://wa.me/917007946276?text=${encodeURIComponent(msg)}`, '_blank');
-    showToast('✅ WhatsApp par redirect ho raha hai!');
-  }
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3000);
+}
 
-  // ── MOBILE MENU ──
-  let menuOpen = false;
-  function toggleMenu() {
-    menuOpen = !menuOpen;
-    document.getElementById('mobileMenu').style.display = menuOpen ? 'block' : 'none';
-  }
-  function closeMobile() {
-    menuOpen = false;
-    document.getElementById('mobileMenu').style.display = 'none';
-  }
-
-  // ── SCROLL REVEAL ──
-  function observeReveal() {
-    const reveals = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    reveals.forEach(r => io.observe(r));
-  }
-
-  // ── INIT ──
-  renderProducts('all');
-  observeReveal();
+renderProducts('all');
 </script>
 </body>
 </html>
